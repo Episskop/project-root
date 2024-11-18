@@ -22,30 +22,30 @@
    cd djangotutorial/
 
 2. Создайте виртуальное окружение 
-   python -m venv venv
-   source venv/bin/activate
+   `python -m venv venv`
+   `source venv/bin/activate`
    # Для Windows: venv\Scripts\activate
 
 4. Установите зависимости
-   pip install -r requirements.txt
+   `pip install -r requirements.txt`
 
 5. Выполните миграции
-   python manage.py migrate
+   `python manage.py migrate`
 
 6. Запустите сервер
-   python manage.py runserver
+   `python manage.py runserver`
 
 Django будет доступен по адресу: http://127.0.0.1:8000
 
 ### 2. Установка и запуск React
 1. Перейдите в папку react-app/
-   cd react-app/
+   `cd react-app/`
 
 2. Установите зависимости
-   npm install
+   `npm install`
 
 3. Запустите сервер разработки
-   npm run dev
+   `npm run dev`
 
 React будет доступен по адресу: http://localhost:5173 либо с главной страницы Django.
 
