@@ -17,6 +17,9 @@
 ## Установка
 
 ### 1. Установка и запуск Django
+
+Рекомендуется использовать PhyCharm
+
 1. Перейдите в папку `djangotutorial/`:
    ```bash
    cd djangotutorial/
