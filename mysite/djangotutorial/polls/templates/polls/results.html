@@ -1,0 +1,24 @@
+{% load static %}
+<video class="background-video" autoplay loop muted>
+    <source src="{% static 'polls/images/background2.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты</title>
+    <link rel="stylesheet" href="{% static 'polls/style_results.css' %}">
+</head>
+<body>
+    <div class="center-content">
+        <h1 class="question-title">{{ question.question_text }}</h1>
+        <ul class="results-list">
+            {% for choice in question.choice_set.all %}
+                <li>{{ choice.choice_text }} — {{ choice.votes }} голос{{ choice.votes|pluralize:"а,ов" }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'polls:detail' question.id %}" class="back-button">Проголосовать снова?</a>
+    </div>
+</body>
+</html>

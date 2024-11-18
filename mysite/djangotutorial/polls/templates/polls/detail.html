@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Опрос</title>
+    <link rel="stylesheet" href="{% static 'polls/style_detail.css' %}">
+</head>
+<body>
+
+<video class="background-video" autoplay loop muted>
+    <source src="{% static 'polls/images/background2.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div class="center-content">
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend><h1 class="question-title">{{ question.question_text }}</h1></legend>
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            {% for choice in question.choice_set.all %}
+                <div class="choice-option">
+                    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+                </div>
+            {% endfor %}
+        </fieldset>
+        <input type="submit" value="Vote" class="submit-button">
+    </form>
+
+    <p><a href="{% url 'polls:index' %}" class="back-button">Back</a></p>
+</div>
+
+</body>
+</html>

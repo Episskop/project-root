@@ -1,0 +1,42 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'polls/style_home.css' %}">
+
+<video class="background-video" autoplay loop muted>
+    <source src="{% static 'polls/images/background2.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+    <div class="container">
+    <!-- Левый блок -->
+    <div class="left-buttons">
+        <a href="http://127.0.0.1:8000/polls/api/questions/">API Question</a>
+        <a href="http://127.0.0.1:8000/polls/api/choices/">API Choices</a>
+    </div>
+
+    <!-- Центральный блок -->
+    <div class="center-block">
+        <h1>Well Hello</h1>
+        <div class="main-buttons">
+            <a href="/admin/">Admin</a>
+            <a href="/polls/">Polls</a>
+            <a href="http://localhost:5173/">Go to React App</a>
+        </div>
+    </div>
+
+    <div class="circles" >
+        <div></div>
+        <div></div>
+        <div></div>
+        <!-- <span></span> -->
+    </div>
+
+</div>
+</body>
+</html>
