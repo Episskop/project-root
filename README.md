@@ -23,15 +23,16 @@
 
 2. Создайте виртуальное окружение 
    python -m venv venv
-   source venv/bin/activate  # Для Windows: venv\Scripts\activate
+   source venv/bin/activate
+   # Для Windows: venv\Scripts\activate
 
-3. Установите зависимости
+4. Установите зависимости
    pip install -r requirements.txt
 
-4. Выполните миграции
+5. Выполните миграции
    python manage.py migrate
 
-5. Запустите сервер
+6. Запустите сервер
    python manage.py runserver
 
 Django будет доступен по адресу: http://127.0.0.1:8000
