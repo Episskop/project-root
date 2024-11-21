@@ -21,6 +21,7 @@ export default function Home() {
         </video>
       </div>
 
+      <div className="root">
       <div className="video-container">
         {VIDEOS.map((video) => (
           <Video
@@ -30,6 +31,7 @@ export default function Home() {
             img={video.img}
           />
         ))}
+      </div>
       </div>
 
       <div className="back-button-container">
