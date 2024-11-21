@@ -1,9 +1,11 @@
+"use client";
+
 import React from 'react';
 import Video from './components/Video';
 import { VIDEOS } from './data/videos';
-import './styles/globals.css';
 import './styles/App.css';
 import './styles/Video.css';
+import './styles/index.css';
 
 export default function Home() {
   const handleBackClick = () => {
